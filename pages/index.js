@@ -8,7 +8,7 @@ const Index = props => {
   return (
     <div className=' max-w-md mx-auto p-2'>
       <h1>
-        <img className='mx-auto rounded-full h-32' src={props.data.headerimage.url} alt='Eugênio Carvalho'/>
+        <img className='mx-auto rounded-full h-32 mt-16' src={props.data.headerimage.url} alt='Eugênio Carvalho'/>
       </h1>
       <h2 className='text-center p-6 text-gray-700 italic font-bold'>Eugênio Carvalho</h2>
       <ul>
