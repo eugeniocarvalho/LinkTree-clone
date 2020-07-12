@@ -12,7 +12,7 @@ const Index = props => {
         <title>Eugênio Carvalho</title>
       </Head>
       <h1>
-        <img className='mx-auto rounded-full h-32 mt-16' src={props.data.headerimage.url} alt='Eugênio Carvalho'/>
+        <img className='mx-auto rounded-full h-32 mt-16' src={props.data.headerimage.url} alt='Eugênio Carvalho' />
       </h1>
       <h2 className='text-center p-6 text-gray-700 italic font-bold'>Eugênio Carvalho</h2>
       <ul>
@@ -28,7 +28,8 @@ const Index = props => {
   )
 }
 
-export async function getServerSideProps() {
+export async function getServerSideProps({ res }) {
+  res.setHeader('Cache-control', 's-maxage=60, stale-while-revalidate')
   const client = Prismic.client('https://linktree-clone.cdn.prismic.io/api/v2')
 
   const page = await client.getSingle('home')
