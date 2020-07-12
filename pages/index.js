@@ -1,12 +1,16 @@
 import React from 'react'
 import Link from '../components/Link'
 import Prismic from 'prismic-javascript'
+import Head from 'next/head'
 
 const Index = props => {
   const items = props.data.body[0].items
 
   return (
     <div className=' max-w-md mx-auto p-2'>
+      <Head>
+        <title>Eugênio Carvalho</title>
+      </Head>
       <h1>
         <img className='mx-auto rounded-full h-32 mt-16' src={props.data.headerimage.url} alt='Eugênio Carvalho'/>
       </h1>
